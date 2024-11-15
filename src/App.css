@@ -25,12 +25,13 @@ body {
   font-weight: 400;
   font-style: normal;
   color: hsl(177, 50%, 95%);
-  background-color: hsl(var(--theme-hue), 86%, 6%);
+  background-color: var(--black);
 }
 
 #root {
   position: relative;
   overflow-x: hidden;
+  background-color: hsl(var(--theme-hue), 86%, 6%);
 }
 
 .main-container {
