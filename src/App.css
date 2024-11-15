@@ -28,8 +28,8 @@ body {
   background-color: hsl(var(--theme-hue), 86%, 6%);
 }
 
-html,
-body {
+#app-root {
+  position: relative;
   overflow-x: hidden;
 }
 
