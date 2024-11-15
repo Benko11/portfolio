@@ -19,6 +19,11 @@
   );
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Inter Display", sans-serif;
   color: hsl(177, 50%, 95%);
