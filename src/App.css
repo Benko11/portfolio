@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&display=swap");
+
+:root {
+  --theme-hue: 199;
+  --container: hsl(var(--theme-hue), 30%, 15%);
+  --black-saturation: 30;
+  --black-lightness: 3;
+  --black: hsl(
+    var(--theme-hue),
+    calc(var(--black-saturation) * 1%),
+    calc(var(--black-lightness) * 1%)
+  );
+  --white-saturation: 20;
+  --white-lightness: 95;
+  --white: hsl(
+    var(--theme-hue),
+    calc(var(--white-saturation) * 1%),
+    calc(var(--white-lightness) * 1%)
+  );
+}
+
+body {
+  font-family: "Inter Display", sans-serif;
+  color: hsl(177, 50%, 95%);
+  background-color: hsl(var(--theme-hue), 86%, 6%);
+  overflow-x: hidden;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 990px;
+  max-width: 95%;
+}

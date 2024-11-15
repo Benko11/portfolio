@@ -1,0 +1,69 @@
+[
+  {
+    "technology": "ReactJS",
+    "image": "react.svg"
+  },
+  {
+    "technology": "Angular",
+    "image": "angular.webp"
+  },
+  {
+    "technology": "TypeScript",
+    "image": "typescript.svg"
+  },
+  {
+    "technology": "JavaScript",
+    "image": "javascript.svg"
+  },
+  {
+    "technology": "CSS3",
+    "image": "css.svg"
+  },
+  {
+    "technology": "HTML5",
+    "image": "html.svg"
+  },
+  {
+    "technology": "TailwindCSS",
+    "image": "tailwindcss.svg"
+  },
+  {
+    "technology": "PostgreSQL",
+    "image": "postgres.svg"
+  },
+  {
+    "technology": "MySQL",
+    "image": "mysql.png"
+  },
+  {
+    "technology": "Laravel",
+    "image": "laravel.svg"
+  },
+  {
+    "technology": "PHP",
+    "image": "php.svg"
+  },
+  {
+    "technology": "MongoDB",
+    "image": "mongodb.svg"
+  },
+  {
+    "technology": "Java",
+    "image": "java.svg"
+  },
+  {
+    "technology": "C",
+    "image": "c.svg"
+  },
+  {
+    "technology": "Fedora",
+    "image": "fedora.svg"
+  },
+  {
+    "technology": "Microsoft Azure",
+    "image": "azure.svg"
+  },
+  { "technology": "NodeJS", "image": "node.png" },
+  { "technology": "ExpressJS", "image": "express-js.png" },
+  { "technology": "NestJS", "image": "nestjs.png" }
+]

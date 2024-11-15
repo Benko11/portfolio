@@ -1,0 +1,49 @@
+[
+  {
+    "title": "*NixConnect",
+    "description": "final thesis, custom made social media platform with retro design, and custom component design aimed at technical and more \"underground\" crowds",
+    "url": "https://gitea.com/benko11/nixbook-official",
+    "techStack": ["ReactJS", "Laravel", "Inertia"],
+    "marker": "Undergoing complete refactorization"
+  },
+
+  {
+    "title": "Benko Notes",
+    "description": "note-taking app that accesses File System Access Web APIs to bring a Notepad-like experience to the Web",
+    "url": "https://github.com/benko11/benko-notes",
+    "techStack": ["TypeScript", "CSS", "Local Storage"],
+    "marker": "Project finished",
+    "demo": "https://benko-notes.netlify.app/"
+  },
+  {
+    "title": "Wooorms",
+    "description": "a web implementation of an MS-DOS game similar to a concept of multiplayer Snake",
+    "url": "https://github.com/Benko11/worms",
+    "techStack": ["TypeScript", "TailwindCSS"],
+    "marker": "Under construction",
+    "demo": "https://wooorms.netlify.app/"
+  },
+  {
+    "title": "Weather Re",
+    "description": "Weather application made in Angular within five days for the job interview",
+    "url": "https://github.com/Benko11/weather-re",
+    "techStack": ["Angular", "CSS"],
+    "marker": "Project finished",
+    "demo": "https://weather-re.vercel.app/"
+  },
+  {
+    "title": "Regular Show Characters",
+    "description": "Example project for illustration of my abilities with more advanced CSS features as well as designing and implementing user-friendly interfaces",
+    "url": "https://github.com/Benko11/regular-show-characters",
+    "techStack": ["Angular", "CSS"],
+    "marker": "Project finished",
+    "demo": "https://regular-show-characters.vercel.app/"
+  },
+  {
+    "title": "Hexagon Hell",
+    "description": "Implementation of the game of corruption in Java",
+    "url": "https://github.com/benko11/hexagon_hell",
+    "techStack": ["Java", "JavaFX"],
+    "marker": "Project finished"
+  }
+]
