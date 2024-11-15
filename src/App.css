@@ -26,6 +26,10 @@ body {
   font-style: normal;
   color: hsl(177, 50%, 95%);
   background-color: hsl(var(--theme-hue), 86%, 6%);
+}
+
+html,
+body {
   overflow-x: hidden;
 }
 
