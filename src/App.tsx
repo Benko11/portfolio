@@ -170,9 +170,4 @@ const HeroAnimation = styled.div`
   grid-template-columns: repeat(5, 1fr);
 `;
 
-const GlassPane = styled.div`
-  background-color: red;
-  aspect-ratio: 1 / 1;
-`;
-
 export default App;
