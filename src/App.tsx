@@ -17,8 +17,8 @@ function App() {
           </HeroMain>
           <Tagline>Web Developer, Software Developer</Tagline>
           <Cta>
-            <PrimaryCtaButton>Learn more</PrimaryCtaButton>
-            <SecondaryCtaButton>View my CV</SecondaryCtaButton>
+            <PrimaryCtaButton href="#portfolio">Learn more</PrimaryCtaButton>
+            <SecondaryCtaButton href="CV.pdf">View my CV</SecondaryCtaButton>
           </Cta>
         </Hero>
         <HeroAnimation></HeroAnimation>
@@ -39,7 +39,7 @@ function App() {
         ></div>
       </HeroSection>
 
-      <MainContainer>
+      <MainContainer id="portfolio">
         <Container>
           <div style={{ paddingBottom: "1.5rem" }}>
             <Header>Portfolio</Header>
@@ -116,7 +116,7 @@ const Cta = styled.div`
   gap: 0.5rem;
 `;
 
-const CtaButton = styled.button`
+const CtaButton = styled.a`
   all: unset;
   text-transform: uppercase;
   font-size: 80%;
