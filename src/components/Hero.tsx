@@ -1,12 +1,23 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useRef } from "react";
 import styled from "styled-components";
 
 export default function Hero() {
+  const container = useRef();
+  useGSAP(
+    () => {
+      gsap.to(HeroMain, { x: 360 });
+    },
+    { scope: container }
+  );
+
   return (
     <Container>
       <Main>
         <HeroMain>
-          <div>Hello.</div>
-          <div>I'm Benjamin</div>
+          <div className="welcome">Hello.</div>
+          <div className="welcome-2">I'm Benjamin</div>
         </HeroMain>
         <Tagline>Web Developer, Software Developer</Tagline>
         <Cta>
