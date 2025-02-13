@@ -1,22 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-  --theme-hue: 199;
-  --container: hsl(var(--theme-hue), 30%, 15%);
-  --black-saturation: 30;
-  --black-lightness: 3;
-  --black: hsl(
-    var(--theme-hue),
-    calc(var(--black-saturation) * 1%),
-    calc(var(--black-lightness) * 1%)
-  );
-  --white-saturation: 20;
-  --white-lightness: 95;
-  --white: hsl(
-    var(--theme-hue),
-    calc(var(--white-saturation) * 1%),
-    calc(var(--white-lightness) * 1%)
-  );
+  --theme: hsl(199, 86%, 6%);
+  --black: hsl(from var(--theme) h 30 3);
+  --white: hsl(from var(--theme) h 20 95);
 }
 
 html,
@@ -28,10 +15,21 @@ body {
   background-color: var(--black);
 }
 
+a {
+  color: hsl(from var(--theme) h s 50);
+  transition: 0.5s all ease;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: hsl(from var(--theme) h s 75);
+}
+
 #root {
   position: relative;
   overflow-x: hidden;
-  background-color: hsl(var(--theme-hue), 86%, 6%);
+  background-color: hsl(from var(--theme) h 86 6);
 }
 
 .main-container {

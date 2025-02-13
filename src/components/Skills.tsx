@@ -36,7 +36,7 @@ const Container = styled.div`
 
 const Skill = styled.div`
   aspect-ratio: 1 / 1;
-  background: hsl(var(--theme-hue), 30%, 15%);
+  background: hsl(from var(--theme) h 30 15);
   display: flex;
   flex-direction: column;
   justify-content: center;

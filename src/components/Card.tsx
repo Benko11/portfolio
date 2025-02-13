@@ -4,6 +4,9 @@ import Checkbox from "../assets/Checkbox";
 import TechStack from "../assets/TechStack";
 import Code from "../assets/Code";
 import Globe from "../assets/Globe";
+import Book from "../assets/Book";
+import { useState } from "react";
+import Modal from "../Modal";
 
 export enum ProjectMarker {
   PROJECT_FINISHED = "Project finished",
@@ -18,6 +21,7 @@ interface Props {
   url: string;
   techStack: string[];
   demo?: string;
+  caseStudy: boolean;
 }
 
 export default function Card({
@@ -27,7 +31,10 @@ export default function Card({
   url,
   techStack,
   demo,
+  caseStudy,
 }: Props) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   function defineMarkers() {
     let icon: JSX.Element;
     switch (marker) {
@@ -86,14 +93,22 @@ export default function Card({
         ) : (
           <span></span>
         )}
+        {caseStudy && (
+          <DemoLink onClick={() => setIsModalOpen(true)}>
+            <Book />
+            <div>Read Case Study</div>
+          </DemoLink>
+        )}
       </ButtonGrid>
+
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}></Modal>
     </Container>
   );
 }
 
 const Container = styled.div`
   padding: 0.5rem 1rem;
-  background: hsl(var(--theme-hue), 30%, 15%);
+  background: hsl(from var(--theme) h 30 15);
   border-radius: 0.75rem;
   display: flex;
   flex-direction: column;
@@ -138,7 +153,7 @@ const Description = styled.div`
   font-size: 0.95rem;
 `;
 
-const Button = styled.a`
+export const Button = styled.a`
   all: unset;
   cursor: pointer;
   text-transform: uppercase;
@@ -153,12 +168,13 @@ const Button = styled.a`
 
   &:hover,
   &:focus {
+    color: inherit;
     transform: translateY(-2px);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
   }
 `;
 
-const CodeLink = styled(Button)`
+export const CodeLink = styled(Button)`
   background-color: rgba(0, 0, 0, 0.3);
 
   &:hover,
@@ -167,12 +183,13 @@ const CodeLink = styled(Button)`
   }
 `;
 
-const DemoLink = styled(Button)`
+export const DemoLink = styled(Button)`
   background-color: rgba(255, 255, 255, 0.5);
-  color: rgb(14, 14, 14);
+  color: var(--black);
 
   &:hover,
   &:focus {
+    color: var(--black);
     background-color: rgba(255, 255, 255, 0.8);
   }
 `;

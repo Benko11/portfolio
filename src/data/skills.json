@@ -4,10 +4,6 @@
     "image": "react.svg"
   },
   {
-    "technology": "Angular",
-    "image": "angular.webp"
-  },
-  {
     "technology": "TypeScript",
     "image": "typescript.svg"
   },
@@ -44,6 +40,10 @@
     "image": "php.svg"
   },
   {
+    "technology": "Angular",
+    "image": "angular.webp"
+  },
+  {
     "technology": "MongoDB",
     "image": "mongodb.svg"
   },
@@ -60,10 +60,13 @@
     "image": "fedora.svg"
   },
   {
+    "technology": "Ubuntu",
+    "image": "ubuntu.svg"
+  },
+  {
     "technology": "Microsoft Azure",
     "image": "azure.svg"
   },
   { "technology": "NodeJS", "image": "node.png" },
-  { "technology": "ExpressJS", "image": "express-js.png" },
-  { "technology": "NestJS", "image": "nestjs.png" }
+  { "technology": "ExpressJS", "image": "express-js.png" }
 ]

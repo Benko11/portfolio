@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default function Footer() {
   return (
     <Container>
-      <div>(c) 2024, Benjamin Dubovecky/Bergstrom</div>
+      <div>(c) 2024-2025, Benjamin Dubovecky/Bergstrom</div>
       <a href="https://github.com/benko11/portfolio" target="_blank">
         View source code of this site
       </a>{" "}
@@ -14,11 +14,11 @@ export default function Footer() {
 const Container = styled.div`
   background-image: linear-gradient(
     to bottom,
-    hsl(var(--theme-hue), 86%, 6%),
-    var(--black) 60%
+    hsl(from var(--theme) h 86% 6%),
+    var(--black)
   );
   height: 10rem;
-  color: hsl(var(--theme-hue), 60%, 70%);
+  color: hsl(from var(--theme) h 60% 70%);
   font-family: monospace;
   padding: 12.5rem 0 5rem 5rem;
 

@@ -1,10 +1,12 @@
 [
   {
     "title": "*NixConnect",
-    "description": "final thesis, custom made social media platform with retro design, and custom component design aimed at technical and more \"underground\" crowds",
-    "url": "https://gitea.com/benko11/nixbook-official",
-    "techStack": ["ReactJS", "Laravel", "Inertia"],
-    "marker": "Undergoing complete refactorization"
+    "description": "final thesis, custom made social media platform with retro design, and custom component design",
+    "url": "https://github.com/Benko11/nixconnect/",
+    "demo": "https://nixconnect.vercel.app/",
+    "techStack": ["NextJS", "Supabase", "PostgreSQL", "TypeScript"],
+    "marker": "Under construction",
+    "caseStudy": true
   },
 
   {
@@ -38,6 +40,14 @@
     "techStack": ["Angular", "CSS"],
     "marker": "Project finished",
     "demo": "https://regular-show-characters.vercel.app/"
+  },
+  {
+    "title": "Supermarket Dashboard",
+    "description": "fictional dashboard for a local supermarket, highlighting key features of ReactJS",
+    "techStack": ["ReactJS", "JavaScript"],
+    "marker": "Project finished",
+    "url": "https://github.com/Benko11/supermarket-dashboard",
+    "demo": "https://supermarket-dashboard-psi.vercel.app/"
   },
   {
     "title": "Hexagon Hell",

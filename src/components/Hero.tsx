@@ -1,47 +1,76 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { useRef } from "react";
 import styled from "styled-components";
+import { AmbientCanvas } from "../AmbientCanvas";
+import { motion } from "motion/react";
 
 export default function Hero() {
-  const container = useRef();
-  useGSAP(
-    () => {
-      gsap.to(HeroMain, { x: 360 });
-    },
-    { scope: container }
-  );
+  const MotionTagline = motion(Tagline);
+  const MotionPrimaryCtaButton = motion(PrimaryCtaButton);
+  const MotionSecondaryCtaButton = motion(SecondaryCtaButton);
 
   return (
-    <Container>
-      <Main>
-        <HeroMain>
-          <div className="welcome">Hello.</div>
-          <div className="welcome-2">I'm Benjamin</div>
-        </HeroMain>
-        <Tagline>Web Developer, Software Developer</Tagline>
-        <Cta>
-          <PrimaryCtaButton href="#portfolio">Learn more</PrimaryCtaButton>
-          <SecondaryCtaButton href="CV.pdf">View my CV</SecondaryCtaButton>
-        </Cta>
-      </Main>
-      <HeroAnimation></HeroAnimation>
-      <div
-        style={{
-          position: "absolute",
-          right: "-40rem",
-          overflow: "hidden",
-          width: "40rem",
-          height: "40rem",
-          boxShadow: "0 0 200px hsl(var(--theme-hue), 100%, 40%)",
-          borderRadius: "50%",
-          background: "transparent",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      ></div>
-    </Container>
+    <>
+      <Container>
+        <Main>
+          <HeroMain>
+            <motion.div
+              className="welcome"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.5, delay: 0.25 }}
+            >
+              Hello.
+            </motion.div>
+            <motion.div
+              className="welcome-2"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.5, delay: 1 }}
+            >
+              I'm Benjamin
+            </motion.div>
+          </HeroMain>
+          <MotionTagline
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.5 }}
+            transition={{ duration: 1, delay: 1.5 }}
+          >
+            Web Developer, Software Developer
+          </MotionTagline>
+          <Cta>
+            <MotionPrimaryCtaButton
+              href="#portfolio"
+              initial={{ scale: 0 }} // Start at normal size
+              animate={{ scale: 1 }} // Bounce effect
+              transition={{
+                ease: "linear",
+                duration: 0.5,
+                delay: 2.5,
+              }}
+            >
+              Learn more
+            </MotionPrimaryCtaButton>
+            <MotionSecondaryCtaButton
+              href="CV.pdf"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{
+                ease: "linear",
+                duration: 0.5,
+                delay: 2.75,
+              }}
+            >
+              View my CV
+            </MotionSecondaryCtaButton>
+          </Cta>
+        </Main>
+        <RightSide>
+          <AmbientCanvas />
+        </RightSide>
+      </Container>
+      <Transition>
+        <TransitionOne></TransitionOne>
+      </Transition>
+    </>
   );
 }
 
@@ -56,12 +85,12 @@ const Main = styled.div`
 const HeroMain = styled.div`
   font-weight: 900;
   font-size: 3.5rem;
+  overflow: visible;
 `;
 
 const Tagline = styled.div`
   font-weight: 200;
   font-size: 1.5rem;
-  opacity: 0.8;
 `;
 
 const Cta = styled.div`
@@ -84,42 +113,42 @@ const PrimaryCtaButton = styled(CtaButton)`
   background-color: var(--white);
   color: var(--black);
 
-  &:hover {
-    background-color: hsl(
-      var(--theme-hue),
-      calc(var(--white-saturation) * 1%),
-      calc(var(--white-lightness) * 1% - 10%)
-    );
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: hsl(from var(--white) h s calc(l - 15));
+    color: var(--black);
   }
 `;
+
 const SecondaryCtaButton = styled(CtaButton)`
   border: 1px solid var(--white);
+  color: var(--white);
 
-  &:hover {
-    background-color: hsl(
-      var(--theme-hue),
-      calc(var(--black-saturation) * 1%),
-      calc(var(--black-lightness) * 1% + 10%)
-    );
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: hsl(from var(--black) h s calc(l + 10));
+    color: var(--white);
   }
 `;
 
 const Container = styled.div`
   height: 100vh;
-  background-image: linear-gradient(
-    to bottom,
-    var(--black) 60%,
-    hsl(var(--theme-hue), 86%, 6%)
-  );
+  background: var(--black);
   display: flex;
-  gap: 4rem;
 `;
 
-const HeroAnimation = styled.div`
-  flex-grow: 1;
-  margin: 20px;
-  display: grid;
-  gap: 1rem;
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-columns: repeat(5, 1fr);
+const RightSide = styled.div`
+  margin-left: auto;
+`;
+
+const Transition = styled.div`
+  display: flex;
+  height: 200px;
+`;
+
+const TransitionOne = styled.div`
+  width: 100%;
+  background-image: linear-gradient(to bottom, var(--black), var(--theme));
 `;

@@ -27,6 +27,7 @@ function App() {
                   techStack={project.techStack}
                   url={project.url}
                   demo={project.demo ? project.demo : undefined}
+                  caseStudy={project.caseStudy || false}
                 />
               ))}
             </CardGrid>
